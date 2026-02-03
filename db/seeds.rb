@@ -7,3 +7,11 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+Book.create!([
+  {title: "The life of a turtle"},
+  {title: "The mirror, the lion and the audacity of the little dog"},
+  {title: "Origami for cats"},
+  {title: "The weight of a hundred kilograms"},
+  {title: "Ruby on Rails for beginners"}
+])
