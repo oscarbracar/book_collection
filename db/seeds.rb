@@ -8,10 +8,20 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-Book.create!([
-  {title: "The life of a turtle"},
-  {title: "The mirror, the lion and the audacity of the little dog"},
-  {title: "Origami for cats"},
-  {title: "The weight of a hundred kilograms"},
-  {title: "Ruby on Rails for beginners"}
-])
+if Rails.env.production?
+  Book.create!([
+    {title: "Production Book 1"},
+    {title: "Production Book 2"},
+    {title: "Production Book 3"},
+    {title: "Production Book 4"},
+    {title: "Production Book 5"}
+  ])
+else
+  Book.create!([
+    {title: "Development Book 1"},
+    {title: "Development Book 2"},
+    {title: "Development Book 3"},
+    {title: "Development Book 4"},
+    {title: "Development Book 5"}
+  ])
+end
