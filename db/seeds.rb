@@ -10,18 +10,18 @@
 
 if Rails.env.production?
   Book.create!([
-    {title: "Production Book 1"},
-    {title: "Production Book 2"},
-    {title: "Production Book 3"},
-    {title: "Production Book 4"},
-    {title: "Production Book 5"}
+    { title: "The Great Gatsby" },
+    { title: "To Kill a Mockingbird" },
+    { title: "Pride and Prejudice" },
+    { title: "The Catcher in the Rye" },
+    { title: "Lord of the Flies" }
   ])
 else
   Book.create!([
-    {title: "Development Book 1"},
-    {title: "Development Book 2"},
-    {title: "Development Book 3"},
-    {title: "Development Book 4"},
-    {title: "Development Book 5"}
+    { title: "Harry Potter and the Sorcerer's Stone" },
+    { title: "The Hunger Games" },
+    { title: "Percy Jackson and the Lightning Thief" },
+    { title: "Diary of a Wimpy Kid" },
+    { title: "The Maze Runner" }
   ])
 end
