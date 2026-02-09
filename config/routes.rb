@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  # OAuth routes
+  get "/auth/:provider/callback", to: "sessions#create"
+  get "/auth/failure", to: "sessions#failure"
+  delete "/logout", to: "sessions#destroy"
+
   resources :user_books
   resources :users
   resources :books do
