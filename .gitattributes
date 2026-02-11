@@ -7,3 +7,14 @@ db/schema.rb linguist-generated
 vendor/* linguist-vendored
 config/credentials/*.yml.enc diff=rails_credentials
 config/credentials.yml.enc diff=rails_credentials
+
+# Force LF line endings for all text files (fixes Heroku deploy issues)
+* text=auto eol=lf
+*.rb text eol=lf
+*.rake text eol=lf
+*.yml text eol=lf
+*.erb text eol=lf
+Gemfile text eol=lf
+Procfile text eol=lf
+Rakefile text eol=lf
+bin/* text eol=lf

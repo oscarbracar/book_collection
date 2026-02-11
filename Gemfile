@@ -49,6 +49,9 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+
+  # Testing
+  gem "rspec-rails"
 end
 
 group :development do
@@ -61,3 +64,9 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+# Google OAuth
+gem "omniauth"
+gem "omniauth-google-oauth2"
+gem "omniauth-rails_csrf_protection"
+gem "dotenv-rails", groups: [:development, :test]

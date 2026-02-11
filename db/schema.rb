@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2026_01_21_014227) do
+ActiveRecord::Schema[8.0].define(version: 2026_02_09_000001) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -18,5 +18,27 @@ ActiveRecord::Schema[8.0].define(version: 2026_01_21_014227) do
     t.string "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "author"
+    t.date "published_date"
+    t.decimal "price", precision: 10, scale: 2
+  end
+
+  create_table "user_books", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "book_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "username"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "email"
+    t.string "uid"
+    t.string "provider"
+    t.string "avatar_url"
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true
   end
 end

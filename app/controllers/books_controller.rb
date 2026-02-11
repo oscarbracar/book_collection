@@ -1,5 +1,5 @@
 class BooksController < ApplicationController
-  before_action :set_book, only: %i[ show edit update destroy ]
+  before_action :set_book, only: %i[ show edit update destroy confirm_destroy ]
 
   # GET /books or /books.json
   def index
@@ -17,6 +17,10 @@ class BooksController < ApplicationController
 
   # GET /books/1/edit
   def edit
+  end
+
+  # GET /books/1/confirm_destroy
+  def confirm_destroy
   end
 
   # POST /books or /books.json
@@ -65,6 +69,6 @@ class BooksController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def book_params
-      params.expect(book: [ :title ])
+      params.expect(book: [ :title, :author, :published_date, :price ])
     end
 end

@@ -2,6 +2,12 @@
 
 one:
   title: MyString
+  author: Author One
+  published_date: 2020-01-15
+  price: 19.99
 
 two:
   title: MyString
+  author: Author Two
+  published_date: 2021-06-20
+  price: 24.99
